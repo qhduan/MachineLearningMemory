@@ -15,6 +15,10 @@ some code reference to [Tensorflow Examples](https://github.com/aymericdamien/Te
 
 [Logistic Classification (sklearn)](LogisticClassification/tensorflow_version.ipynb)
 
-[RNN](RNN/RNN.ipynb)
+[RNN (tensorflow)](RNN/RNN.ipynb)
+
+[LSTM (tensorflow)](RNN/LSTM.ipynb)
+
+
 
 

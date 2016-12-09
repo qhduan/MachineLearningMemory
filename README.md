@@ -7,9 +7,9 @@
 
 # 前提
 
-numpy
-sklearn >= 0.18 这个版本不达标，某些代码就要改……
-tensoflow
+    numpy
+    sklearn >= 0.18 这个版本不达标，某些代码就要改……
+    tensorflow
 
 这些肯定是必须的
 

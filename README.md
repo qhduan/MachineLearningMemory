@@ -19,29 +19,31 @@
 
 # 代码
 
-some code reference to [Tensorflow Examples](https://github.com/aymericdamien/TensorFlow-Examples)
+Some code reference to [Tensorflow Examples](https://github.com/aymericdamien/TensorFlow-Examples)
 
-### 线性回归实现
+一些代码，风格，写作参数参考了[Tensorflow Examples](https://github.com/aymericdamien/TensorFlow-Examples)
+
+### 线性回归(Linear Regression)实现
 
 [Linear Regression (sklearn)](LinearRegression/sklearn_version.ipynb)
 
 [Linear Regression (tensorflow)](LinearRegression/tensorflow_version.ipynb)
 
-### 逻辑回归实现
+### 逻辑回归(分类)(Logistic Classification)实现
 
 [Logistic Classification (sklearn)](LogisticClassification/sklearn_version.ipynb)
 
 [Logistic Classification (sklearn)](LogisticClassification/tensorflow_version.ipynb)
 
-### 简单的递归神经网络
+### 简单的递归神经网络(Recurrent Neural Network)
 
 [RNN (tensorflow)](RNN/RNN.ipynb)
 
-### LSTM着东西能翻译成中文？
+### 长短期记忆网(LSTM, Long-Short Term Memory) （这中文翻译有什么意义？）
 
 [LSTM (tensorflow)](RNN/LSTM.ipynb)
 
-### 简单的卷积神经网，用了MNIST
+### 简单的卷积神经网(Convolutional Neural Network)，用了MNIST
 
 [CNN (tensorflow)](Convolution/CNN_tensorflow.ipynb)
 

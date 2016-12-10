@@ -33,7 +33,17 @@ Some code reference to [Tensorflow Examples](https://github.com/aymericdamien/Te
 
 [Logistic Classification (sklearn)](LogisticClassification/sklearn_version.ipynb)
 
-[Logistic Classification (sklearn)](LogisticClassification/tensorflow_version.ipynb)
+[Logistic Classification (tensorflow)](LogisticClassification/tensorflow_version.ipynb)
+
+### 多层感知机(MLP, Multilayer Perceptron)
+
+其实也就是人工神经网络（ANN, Artificial Neural Network）
+
+现在一般我们就只会叫它神经网络（NN, Neural Network）
+
+[MLP (sklearn)](MLP/sklearn_version.ipynb)
+
+[MLP (tensorflow)](MLP/tensorflow_version.ipynb)
 
 ### 简单的递归神经网络(Recurrent Neural Network)
 

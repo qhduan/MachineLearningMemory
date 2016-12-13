@@ -57,4 +57,6 @@ Some code reference to [Tensorflow Examples](https://github.com/aymericdamien/Te
 
 [CNN (tensorflow)](Convolution/CNN_tensorflow.ipynb)
 
+### Batch Normalization 在Tensorflow的示例
 
+[Batch Normalization (tensorflow)](utils/batch_normalization.ipynb)

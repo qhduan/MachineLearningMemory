@@ -71,6 +71,8 @@ Some code reference to [Tensorflow Examples](https://github.com/aymericdamien/Te
 
 [HASH特征 sklearn](NLP/谁的诗/HASH_sklearn.ipynb)
 
+[HASH特征 基本 CNN tensorflow](NLP/谁的诗/CNN_tensorflow.ipynb)
+
 [HASH特征 基本 LSTM tensorflow](NLP/谁的诗/LSTM_tensorflow.ipynb)
 
 [HASH特征 加Dropout LSTM tensorflow](NLP/谁的诗/LSTM_dropout_tensorflow.ipynb)

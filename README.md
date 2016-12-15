@@ -60,3 +60,25 @@ Some code reference to [Tensorflow Examples](https://github.com/aymericdamien/Te
 ### Batch Normalization 在Tensorflow的示例
 
 [Batch Normalization (tensorflow)](utils/batch_normalization.ipynb)
+
+### NLP 任务
+
+#### 文本分类
+
+##### 判断一句诗是李白写的，还是杜甫写的
+
+[TFIDF特征 sklearn](NLP/谁的诗/TFIDF_sklearn.ipynb)
+
+[HASH特征 sklearn](NLP/谁的诗/HASH_sklearn.ipynb)
+
+[HASH特征 基本 LSTM tensorflow](NLP/谁的诗/LSTM_tensorflow.ipynb)
+
+[HASH特征 加Dropout LSTM tensorflow](NLP/谁的诗/LSTM_dropout_tensorflow.ipynb)
+
+[HASH特征 多层 LSTM tensorflow](NLP/谁的诗/LSTM_multilayer_tensorflow.ipynb)
+
+[HASH特征 双向 LSTM tensorflow](NLP/谁的诗/LSTM_bidirectional_tensorflow.ipynb)
+
+[HASH特征 注意力 LSTM tensorflow](NLP/谁的诗/LSTM_attention_tensorflow.ipynb)
+
+[HASH特征 双向注意力加Dropout LSTM tensorflow](NLP/谁的诗/LSTM_bidirectional_attention_dropout_tensorflow.ipynb)

@@ -59,7 +59,7 @@ Some code reference to [Tensorflow Examples](https://github.com/aymericdamien/Te
 
 ### Batch Normalization 在Tensorflow的示例
 
-[Batch Normalization (tensorflow)](utils/batch_normalization.ipynb)
+[Batch Normalization (tensorflow)](MISC/batch_normalization.ipynb)
 
 ### NLP 任务
 
@@ -90,3 +90,7 @@ Some code reference to [Tensorflow Examples](https://github.com/aymericdamien/Te
 [超分辨率卷积网 SRCNN tensorflow](Vision/SuperResolution/SRCNN.ipynb)
 
 [判断一张图片是喵喵还是汪汪 CNN tensorflow](Vision/CatDog/CNN_tensorflow.ipynb)
+
+[判断一张图片是喵喵还是汪汪 加入梯度裁剪 CNN tensorflow](Vision/CatDog/CNN_CLIP_tensorflow.ipynb)
+
+[判断一张图片是喵喵还是汪汪 加入梯度裁剪和批量标准化 CNN tensorflow](Vision/CatDog/CNN_BN_CLIP_tensorflow.ipynb)

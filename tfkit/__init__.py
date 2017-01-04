@@ -1,6 +1,31 @@
 
+import os
+import sys
+
+work_dir = os.path.abspath(os.path.dirname(__file__))
+sys.path.insert(0, work_dir)
+
 import numpy as np
 import tensorflow as tf
+
+from word_label import WordLabel
+
+def embedding(input_layer, vocabulary_size, embedding_size, max_len, name):
+    with tf.variable_scope(name):
+        input_layer = tf.to_int64(input_layer)
+        batch_size = int(input_layer.get_shape()[0])
+        embeddings = tf.Variable(
+            tf.random_uniform([vocabulary_size, embedding_size], -1.0, 1.0),
+            name='embeddings',
+            trainable=False
+        )
+        X = tf.squeeze(tf.nn.embedding_lookup(embeddings, input_layer))
+        print('===>', X.get_shape(), '\t', name)
+        return X
+
+
+def epsilon():
+    return tf.constant(1e-7)
 
 def train_softmax(pred, y, opt, clip=None):
     cost = tf.reduce_mean(
@@ -23,16 +48,16 @@ def dropout(input_layer, dropout):
     return tf.nn.dropout(input_layer, dropout)
 
 def true_positive(pred, y):
-    return tf.count_nonzero(pred * y)
+    return tf.to_float(tf.count_nonzero(pred * y))
 
 def true_negative(pred, y):
-    return tf.count_nonzero((pred - 1) * (y - 1))
+    return tf.to_float(tf.count_nonzero((pred - 1) * (y - 1)))
 
 def false_positive(pred, y):
-    return tf.count_nonzero(pred * (y - 1))
+    return tf.to_float(tf.count_nonzero(pred * (y - 1)))
 
 def false_negative(pred, y):
-    return tf.count_nonzero((pred - 1) * y)
+    return tf.to_float(tf.count_nonzero((pred - 1) * y))
 
 def accuracy(pred, y, softmax=False):
     if softmax:
@@ -42,7 +67,7 @@ def accuracy(pred, y, softmax=False):
     tn = true_negative(pred, y)
     fp = false_positive(pred, y)
     fn = false_negative(pred, y)
-    return (tp + tn) / (tp + fp + fn + tn)
+    return (tp + tn) / (tp + fp + fn + tn + epsilon())
 
 def precision(pred, y, softmax=False):
     if softmax:
@@ -50,7 +75,7 @@ def precision(pred, y, softmax=False):
         y = tf.argmax(y, 1)
     tp = true_positive(pred, y)
     fp = false_positive(pred, y)
-    return tp / (tp + fp)
+    return tp / (tp + fp + epsilon())
 
 def recall(pred, y, softmax=False):
     if softmax:
@@ -58,12 +83,12 @@ def recall(pred, y, softmax=False):
         y = tf.argmax(y, 1)
     tp = true_positive(pred, y)
     fn = false_negative(pred, y)
-    return tp / (tp + fn)
+    return tp / (tp + fn + epsilon())
 
 def f1(pred, y, softmax=False):
     prec = precision(pred, y, softmax)
     reca = recall(pred, y, softmax)
-    return (prec * reca * 2) / (prec + reca)
+    return (2 * prec * reca) / (prec + reca + epsilon())
 
 def batch_flow(inputs, targets, batch_size):
     """流动数据流"""
@@ -131,7 +156,7 @@ def conv(input_layer, output_size, pitch_shape,
             )
 
         print('===>', conv.get_shape(), '\t', name)
-        
+
         if activation == 'sigmoid':
             return tf.sigmoid(conv)
         elif activation == 'tanh':

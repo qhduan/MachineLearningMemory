@@ -85,7 +85,7 @@ Some code reference to [Tensorflow Examples](https://github.com/aymericdamien/Te
 
 [HASH特征 双向注意力加Dropout LSTM tensorflow](NLP/谁的诗/LSTM_bidirectional_attention_dropout_tensorflow.ipynb)
 
-[HASH特征 Gated CNN tensorflow 新的哦！](NLP/谁的诗/Gated_CNN_tensorflow.ipynb)
+[HASH特征 Gated CNN tensorflow 新的哦！](NLP/谁的诗/GCNN_tensorflow.ipynb)
 
 ### 机器视觉任务
 
